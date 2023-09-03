@@ -7,6 +7,7 @@ import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import SearchBox from './SearchBox';
 import logo from '../assets/logo.ico';
+import { resetCart } from '../slices/cartSlice';
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart); // get cart data from state
@@ -21,6 +22,7 @@ const Header = () => {
     try {
         await logoutApiCall().unwrap(); // logout using logout route
         dispatch(logout()); // logout in the local storage
+        dispatch(resetCart());
         navigate('/login');
     } catch (err) {
         console.log(err);
