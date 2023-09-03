@@ -9,6 +9,8 @@ import Meta from '../components/Meta';
 
 const ShippingScreen = () => {
     const cart = useSelector((state) => state.cart); // get cart data from state
+    
+    // NOTE : cant erase address properly
     const { shippingAddress } = cart;
 
     const [address, setAddress] = useState(shippingAddress?.address || '');
