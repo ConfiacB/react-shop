@@ -16,9 +16,20 @@ It is a MERN (MongoDB, ExpressJS, ReactJS, NodeJS) stack ecommerce platform with
 
 Rename example.env to .env
 
-Get your MongoDB URI after creating the MongoDB database
-Get your Client Id and App secret with your PayPal account
-Change JWT_SECRET to what you want (like abc123)
+Get your MongoDB URI after creating the MongoDB database <br />
+Get your Client Id and App secret with your PayPal account <br />
+Change JWT_SECRET and PAGINATION_LIMIT to what you want (i.e. abc123 and 8) <br />
+
+```
+NODE_ENV=development
+PORT=5000
+MONGO_URI=ADD_YOUR_MONGO_URI
+JWT_SECRET=YOUR_SECRET
+PAYPAL_CLIENT_ID=YOUR_PAYPAL_CLIENT_ID
+PAYPAL_APP_SECRET=YOUR_PAYPAL_APP_SECRET
+PAYPAL_API_URL=https://api-m.sandbox.paypal.com
+PAGINATION_LIMIT=8
+```
 
 ## Dependencies :
 
@@ -28,25 +39,25 @@ cd frontend
 npm install
 ```
 
-##Run :
+## Run :
 
-run frontend and backend
+run frontend and backend <br />
 `npm run dev`
-run backend only
+
+run backend only <br />
 `npm run server`
 
 ## Build :
 
-To create frontend production build and install
-Go to root folder and write this script
-`npm run build`
+To create frontend production build and install dependencies <br />
+In root folder `npm run build`
 
 ## Seed Database :
 
-import data
+import data <br />
 `npm run data:import`
 
-destroy data
+destroy data <br />
 `npm run data:destroy`
 
 ## Sample user :
