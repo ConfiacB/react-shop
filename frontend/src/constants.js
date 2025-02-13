@@ -1,6 +1,5 @@
 // export const BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : '';
-export const BASE_URL =
-  "https://react-shop-80yida2gs-confiacbs-projects.vercel.app/";
+export const BASE_URL = "react-shop-r1h8db9s2-confiacbs-projects.vercel.app";
 export const PRODUCTS_URL = "/api/products";
 export const USERS_URL = "/api/users";
 export const ORDERS_URL = "/api/orders";
