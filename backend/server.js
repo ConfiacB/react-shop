@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "react-shop-r1h8db9s2-confiacbs-projects.vercel.app",
+    origin: "https://react-shop-eight-dusky.vercel.app/",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
