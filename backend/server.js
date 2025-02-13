@@ -3,7 +3,6 @@ import path from "path";
 import express from "express"; // this syntax is type "module" in package.json
 import dotenv from "dotenv";
 dotenv.config();
-import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
@@ -20,14 +19,6 @@ const app = express(); // initialize express
 // Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use(
-  cors({
-    origin: "https://react-shop-eight-dusky.vercel.app/",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  })
-);
 
 // cookie parser middleware
 app.use(cookieParser());
